@@ -39,7 +39,7 @@ export default function Dashboard() {
     <Layout className="min-h-screen bg-gray-50 dark:bg-[#0a0a0a]">
       <Navbar 
         selectedDataset={selectedDataset} 
-        onDatasetChange={setSelectedDataset} 
+        onDatasetChange={(value) => setSelectedDataset(value as "A" | "B" | "C" | "D")}
       />
 
       <Content className="p-6 max-w-[1400px] mx-auto w-full">
