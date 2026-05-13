@@ -10,6 +10,11 @@ Dashboard ejecutivo diseñado para el Jefe de Ventas de Palvi, enfocado en la to
 - **Custom Hook `useMetrics`:** Centralicé la lógica de negocio (cálculo de variaciones diarias, manejo de `nulls` y asignación de estados de éxito/error) fuera de los componentes. Esto facilita el testeo y mantiene la UI "limpia".
 - **Arquitectura Defensiva:** El sistema maneja estados de carga y previene errores de ejecución si los datos (`metrics.json`) vienen incompletos o nulos.
 
+## 🌌 Special Feature: "The Force" Theme Switcher
+En honor al mes de Star Wars (May the 4th), he implementado un selector de temas dinámico:
+- **Light Side:** Iconos aleatorios (Grogu, Chewbacca, Ahsoka) con sables de luz Jedi de colores variables.
+- **Dark Side:** Iconos de los Sith (Vader, Maul) con el clásico sable rojo carmesí y efecto de levitación por la Fuerza.
+- **Tecnología:** Uso de `next-themes`, animaciones nativas de Tailwind y manipulación dinámica de Design Tokens de Ant Design.
 ## 🛠️ Segunda Iteración (Próximos Pasos)
 
 Si tuviera más tiempo, implementaría:
