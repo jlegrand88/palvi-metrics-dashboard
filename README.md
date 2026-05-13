@@ -1,36 +1,26 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Palvi Metrics Dashboard - Technical Challenge
 
-## Getting Started
+Dashboard ejecutivo diseñado para el Jefe de Ventas de Palvi, enfocado en la toma de decisiones rápida (regla de los 5 minutos).
 
-First, run the development server:
+## 🚀 Decisiones Técnicas
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Next.js 15 (App Router):** Elegido por su manejo eficiente de rutas y optimización de renderizado (SSR para la carga inicial de datos).
+- **Ant Design (v5):** Implementado para lograr una interfaz consistente, profesional y "Enterprise-ready" en tiempo récord. Se utilizaron componentes como `Statistic` con lógica semántica de colores basada en la propiedad `direction` del JSON.
+- **Recharts:** Seleccionada por su capacidad de manejar datos temporales y renderizado fluido, permitiendo visualizar la tendencia de los últimos 30 días para dar contexto histórico a la métrica diaria.
+- **Custom Hook `useMetrics`:** Centralicé la lógica de negocio (cálculo de variaciones diarias, manejo de `nulls` y asignación de estados de éxito/error) fuera de los componentes. Esto facilita el testeo y mantiene la UI "limpia".
+- **Arquitectura Defensiva:** El sistema maneja estados de carga y previene errores de ejecución si los datos (`metrics.json`) vienen incompletos o nulos.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🛠️ Segunda Iteración (Próximos Pasos)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Si tuviera más tiempo, implementaría:
+1. **Filtros Temporales Dinámicos:** Permitir al usuario cambiar entre vista semanal, mensual o trimestral, en lugar de solo comparar contra el día anterior.
+2. **Sistema de Alertas Inteligente:** Un motor que resalte automáticamente las 3 métricas que más requieren atención (foco) basándose en desviaciones estándar o metas (KPIs).
+3. **Persistencia de Preferencias:** Guardar el dataset seleccionado (A, B, C o D) en `localStorage` o URL params para que el usuario mantenga su contexto al refrescar.
+4. **Unit Testing:** Implementar Jest/React Testing Library especialmente para la lógica del hook `useMetrics`, asegurando que los cálculos de tendencia sean siempre exactos.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📦 Instalación y Ejecución
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Clonar el repositorio.
+2. Instalar dependencias: `npm install`
+3. Ejecutar en desarrollo: `npm run dev`
+4. Abrir [http://localhost:3000](http://localhost:3000)
