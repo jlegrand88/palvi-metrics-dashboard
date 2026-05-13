@@ -52,3 +52,21 @@ body {
 .ant-segmented-item:not(.ant-segmented-item-selected) {
   @apply text-zinc-500 hover:text-zinc-800 dark:hover:text-zinc-200;
 }
+
+@keyframes pulse-slow {
+  0%, 100% { transform: scale(1); filter: brightness(1); }
+  50% { transform: scale(1.08); filter: brightness(1.2); }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 4s ease-in-out infinite;
+}
+
+@keyframes force-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-3px); }
+}
+
+.animate-force {
+  animation: force-float 4s ease-in-out infinite;
+}

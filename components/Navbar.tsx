@@ -23,7 +23,7 @@ export const Navbar = ({ selectedDataset, onDatasetChange }: NavbarProps) => {
         <div className="w-8 h-8 bg-blue-600 rounded flex items-center justify-center shadow-lg shadow-blue-500/20">
           <span className="text-white font-bold text-xs">P</span>
         </div>
-        <Title level={4} style={{ margin: 0 }} className="hidden sm:block dark:text-zinc-100">
+        <Title level={4} style={{ margin: 0 }} className="hidden sm:block !text-zinc-100">
           Palvi <span className="font-light text-zinc-400">Metrics</span>
         </Title>
       </div>
