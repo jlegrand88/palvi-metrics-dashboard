@@ -1,11 +1,11 @@
-import { AntdRegistry } from '@ant-design/nextjs-registry';
-import './globals.css';
+import { Providers } from "@/components/ThemeProvider";
+import "./globals.css";
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="es">
+    <html lang="es" suppressHydrationWarning>
       <body>
-        <AntdRegistry>{children}</AntdRegistry>
+        <Providers>{children}</Providers>
       </body>
     </html>
   );
