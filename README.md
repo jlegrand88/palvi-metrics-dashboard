@@ -1,5 +1,7 @@
 # Palvi Metrics Dashboard - Technical Challenge
 
+![Demo del Dashboard](./Screen%20Recording%20-%20May%2012,%202026.gif)
+
 Dashboard ejecutivo diseñado para el Jefe de Ventas de Palvi, enfocado en la toma de decisiones rápida (regla de los 5 minutos).
 
 ## 🚀 Decisiones Técnicas
