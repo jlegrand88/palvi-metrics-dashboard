@@ -1,11 +1,10 @@
 @import "tailwindcss";
-/* @tailwind base;
-@tailwind components;
-@tailwind utilities; */
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --dataset-selected-bg: #ffffff;
+  --dataset-selected-text: #2563eb; /* blue-600 */
 }
 
 @theme inline {
@@ -19,6 +18,8 @@
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
+    --dataset-selected-bg: #3f3f46; /* zinc-700 */
+    --dataset-selected-text: #ffffff;
   }
 }
 
@@ -26,4 +27,28 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* --- Estilos para el Selector de Dataset (Ant Design Overrides) --- */
+
+/* Nota de Senior: No uses @apply con !important. 
+   Es mejor usar CSS puro para asegurar que le ganes a la especificidad de AntD.
+*/
+
+.ant-segmented-item-selected {
+  background-color: var(--dataset-selected-bg) !important;
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1) !important;
+}
+
+.ant-segmented-item-selected .ant-segmented-item-label {
+  color: var(--dataset-selected-text) !important;
+  font-weight: 600 !important;
+}
+
+.custom-segmented {
+  @apply transition-all duration-200;
+}
+
+.ant-segmented-item:not(.ant-segmented-item-selected) {
+  @apply text-zinc-500 hover:text-zinc-800 dark:hover:text-zinc-200;
 }
