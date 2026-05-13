@@ -12,7 +12,7 @@ const lightIcons = [
 
 const darkIcons = [
   '/star-wars-icons/icons8-darth-vader-48.png',
-  '/star-wars-icons/darth-maul_icon-icons.com_76953(1).png'
+  '/star-wars-icons/darth-maul_icon-icons.com_76953.png'
 ];
 
 const lightSaberColors = ['#0074D9', '#2ECC40', '#B10DC9', '#FFDC00'];
